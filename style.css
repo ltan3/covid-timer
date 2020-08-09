@@ -1,0 +1,98 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #fff;
+  /*text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);*/
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+
+/*
+ * Cover
+ */
+.cover {
+  padding: 0 1.5rem;
+}
+.cover .btn-lg {
+  padding: .75rem 1.25rem;
+  font-weight: 700;
+}
+
+b {
+  font-weight: 700;
+}
+
+.timer {
+  display: inline-block;
+  padding: .75rem 1.25rem;
+  width: 6rem;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+  background-color: #fff;
+  color: #333;
+  border: .05rem solid #fff;
+  border-radius: .3rem;
+}
+
+@keyframes timer-end {
+  from {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    color: #fff;
+  }
+  to {
+    background-color: #fff;
+    border-color: #fff;
+    color: #333;
+  }
+}
+
+.timer.highlight {
+  animation-name: timer-end;
+  animation-duration: 0.75s;
+  animation-timing-function: ease-in;
+}
+
+
+/*
+ * Footer
+ */
+.mastfoot {
+  color: rgba(255, 255, 255, .5);
+}
