@@ -2,13 +2,6 @@ function lpad2(n) {
 	return ('0' + n.toString()).slice(-2);
 }
 
-function setValues(num_deaths, period) {
-	const deaths_elem = document.getElementById('n-deaths');
-	deaths_elem.innerHTML = num_deaths;
-	const seconds_elem = document.getElementById('n-seconds'); 
-	seconds_elem.innerHTML = period;
-}
-
 function updateTimer(start_time, period) {
 	const timer_elem = document.getElementById('timer');
 	const ticks = Math.floor((Date.now() - start_time) / 1000);
@@ -38,7 +31,13 @@ function start() {
 
 			const num_deaths = response.data.deathIncrease;
 			const period = Math.round(24 * 60 * 60 / num_deaths);
-			setValues(num_deaths, period);
+			
+			const deaths_elem = document.getElementById('n-deaths');
+			deaths_elem.innerHTML = num_deaths;
+			const seconds_elem = document.getElementById('n-seconds'); 
+			seconds_elem.innerHTML = period;
+			const yesterday_elem = document.getElementById('yesterday-txt');
+			yesterday_elem.innerHTML = yesterday.toLocaleDateString('en-US');
 
 			const start_time = Date.now();
 			updateTimer(start_time, period);
