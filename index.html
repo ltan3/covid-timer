@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v4.1.1">
-    <title>Title</title>
+    <title>COVID Statistics</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -20,39 +20,36 @@
     <meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
     <meta name="theme-color" content="#563d7c"> -->
 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="timer.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="style.css" rel="stylesheet">
 
   </head>
   <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column justify-content-center">
-  <!-- <header class="masthead mb-auto">
-    <div class="inner">
-      <h3 class="masthead-brand">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
+    
+    <div class="d-flex w-100 justify-content-center align-items-center main-container">
+      <div class="main-inner">
+        <p class="lead">
+          Yesterday, at least <b><span id="n-deaths"></span></b> Americans died because of COVID-19.
+        </p>
+        <p class="lead">
+          On average, this was approximately <b>one</b> death every <b><span id="n-seconds"></span></b> seconds.
+        </p>
+        <p class="lead">
+          <span id="timer" class="timer">0:00</span>
+        </p>
+      </div>
     </div>
-  </header> -->
 
-  <main role="main" class="inner cover">
-    <p class="lead">Yesterday, at least <b>1,287</b> Americans died because of COVID-19.</p>
-    <p class="lead">On average, this was approximately <b>one</b> death every <b>67</b> seconds.</p>
-    <p class="lead">
-      <span id="timer" class="timer">0:00</span>
-    </p>
-  </main>
-
-  <!-- <footer class="mastfoot mt-auto">
-    <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+    <div class="d-flex w-100 justify-content-center align-items-center footer-container">
+      <div class="footer-inner">
+        <p>
+          Data from The Atlantic's <a href="https://covidtracking.com">COVID Tracking Project</a>.
+        </p>
+      </div>
     </div>
-  </footer> -->
-</div>
 
-<script type="text/javascript" src="timer.js"></script>
-
-</body>
+  </body>
 </html>
